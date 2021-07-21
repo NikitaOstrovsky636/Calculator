@@ -1,20 +1,20 @@
 .calculator-form {
-      margin: 0px 0px 200px 0px;
-      &__input {
-            padding: 0px 0px 10px 0px;
-	} 
+    margin: 0px 0px 200px 0px;
+    &__input {
+        padding: 0px 0px 10px 0px;
+    } 
 }
 
 .action-bar {
-	&__button {
-            color: white;
-            background-color: #1976D2;
-            border-radius: 10px;
-	}
+    &__button {
+        color: white;
+        background-color: #1976D2;
+        border-radius: 10px;
+    }
 }
 
 .calculator-result {
-      text-align: center;
+    text-align: center;
 } 
 
 
