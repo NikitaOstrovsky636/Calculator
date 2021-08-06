@@ -1,138 +1,147 @@
+$cadetBlue: #429EA6;
+$indigoDye: #153B50;
+$alabaster: #ECEBE4;
+
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f0ecec;
     padding-top: 50px;
 }
 
-.calculator {
-    
+.calculator-container {
     width: 330px;
     height: 430px;
-    background-color: #797979;
+    background-color: $alabaster;
     margin: 0 auto;
-    border-radius: 10px 10px 5px 5px;
-    border: 3px solid rgb(30, 4, 77);
+    padding: 0px 10px;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid $indigoDye;
 }
 
-.calculator-form {
+.calculator {
     margin: 0 auto;
-    width: 95%;
-    height: 90%;
-    background-color: #c9c9c9;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 52px 52px 52px 52px 52px;
-    grid-template-rows: 75px 52px 52px 52px 52px 52px;
-    grid-template-areas: 
-        'output output output output output'
-        'ce ce ce ce ce'
-        'seven eight nine div result'
-        'four five six mul result'
-        'one two three sub result'
-        'zero zero zero sum result';
-    border-radius: 0px 0px 15px 15px;
-    grid-column-gap: 9px;
-    grid-row-gap: 9px;
-    
+    height: 93%;
+    background-color: $cadetBlue;
+    border-radius: 0px 0px 10px 10px;
+
+    &__output {
+        box-sizing: border-box;
+        width: 100%;
+        height: 65px;
+        margin: 0px 0px 9px 0px;
+        color: $alabaster;
+        background-color: $indigoDye;
+        font-size: 24pt;
+        text-align: right;
+    }
+
+    &__action-bar {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 58px 58px 58px 58px 58px;
+        grid-template-rows: 58px 58px 58px 58px 58px;
+        grid-template-areas: 
+            'ce ce ce ce ce'
+            'seven eight nine div result'
+            'four five six mul result'
+            'one two three sub result'
+            'zero zero zero sum result';
+        grid-column-gap: 6px;
+        grid-row-gap: 7px;
+    }
+}
+
+.calculator-action-bar {
+
     &__item {
-        background-color: #797979;
-        color: rgb(30, 4, 77);
+        background-color: $alabaster;
+        color: $indigoDye;
         border-radius: 6px;
         font-size: 18pt; 
         font-weight: 700;
         cursor: pointer;
-        box-shadow: 0 0 5px 1px rgb(30, 4, 77);
         border:none;
+
         &:hover {
-            background-color: rgb(73, 71, 75);
+            background-color: $indigoDye;
         }
     }
 }
 
-.calculator-bottom__href {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    padding: 12px 0px 0px 0px ;
-    color: rgb(30, 4, 77);
-    font-weight: 700;
+.calculator-footer {
+    
+    &__github-link {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 0px 0px 0px ;
+        color: $indigoDye;
+        font-weight: 700;
+    }
 }
 
-.action-bar {
+.action-bar-item {
 
-    &__output {
-        margin: 9px 0px 0px 0px;
-        color: #797979;
-        background-color: rgb(34, 32, 32);
-        font-size: 24pt;
-        grid-area: output;
-        text-align: right;
-    }
-
-    &__button-ce {
+    &__ce {
         grid-area: ce;
     }
 
-    &__button-seven {
+    &__seven {
         grid-area: seven;
     }
 
-    &__button-eight {
+    &__eight {
         grid-area: eight;
     }
 
-    &__button-nine {
+    &__nine {
         grid-area: nine;
     }
 
-    &__button-div {
+    &__div {
         grid-area: div;
     }
 
-    &__button-four {
+    &__four {
         grid-area: four;
     }
 
-    &__button-five {
+    &__five {
         grid-area: five;
     }
 
-    &__button-six {
+    &__six {
         grid-area: six;
     }
 
-    &__button-mul {
+    &__mul {
         grid-area: mul;
     }
 
-    &__button-one {
+    &__one {
         grid-area: one;
     }
 
-    &__button-two {
+    &__two {
         grid-area: two;
     }
 
-    &__button-three {
+    &__three {
         grid-area: three;
     }
 
-    &__button-sub {
+    &__sub {
         grid-area: sub;
     }
 
-    &__button-zero {
+    &__zero {
         grid-area: zero;
     }
 
-    &__button-sum {
+    &__sum {
         grid-area: sum;
     }
 
-    &__button-result {
+    &__result {
         grid-area: result;
     }
 }
-
-
-
