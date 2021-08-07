@@ -1,6 +1,8 @@
-$cadetBlue: #429EA6;
-$indigoDye: #153B50;
-$alabaster: #ECEBE4;
+$buttonsBgColor: #429EA6;
+$darkBlue: #153B50;
+$lightGray: #ECEBE4;
+$hoverColor: #95A3B3;
+$borderRadius: 5px;
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -9,36 +11,38 @@ body {
 
 .calculator-container {
     width: 330px;
-    height: 430px;
-    background-color: $alabaster;
+    height: 490px;
+    background-color: $lightGray;
     margin: 0 auto;
-    padding: 0px 10px;
-    border-radius: 10px 10px 10px 10px;
-    border: 3px solid $indigoDye;
+    padding: 10px 10px;
+    border-radius: $borderRadius;
+    border: 3px solid $darkBlue;
 }
 
 .calculator {
     margin: 0 auto;
-    height: 93%;
-    background-color: $cadetBlue;
-    border-radius: 0px 0px 10px 10px;
+    height: 95%;
 
     &__output {
         box-sizing: border-box;
         width: 100%;
         height: 65px;
-        margin: 0px 0px 9px 0px;
-        color: $alabaster;
-        background-color: $indigoDye;
-        font-size: 24pt;
+        margin: 0px 0px 35px 0px;
+        color: $lightGray;
+        background-color: $darkBlue;
+        font-size: 30px;
         text-align: right;
+        border-radius: $borderRadius;
     }
 
     &__action-bar {
         justify-content: center;
         display: grid;
+        padding: 15px 0px;
+        border-radius: $borderRadius;
+        background-color: $buttonsBgColor;
         grid-template-columns: 58px 58px 58px 58px 58px;
-        grid-template-rows: 58px 58px 58px 58px 58px;
+        grid-template-rows: 63px 63px 63px 63px 63px;
         grid-template-areas: 
             'ce ce ce ce ce'
             'seven eight nine div result'
@@ -53,16 +57,16 @@ body {
 .calculator-action-bar {
 
     &__item {
-        background-color: $alabaster;
-        color: $indigoDye;
-        border-radius: 6px;
-        font-size: 18pt; 
+        background-color: $lightGray;
+        color: $darkBlue;
+        border-radius: $borderRadius;
+        font-size: 25px; 
         font-weight: 700;
         cursor: pointer;
         border:none;
 
         &:hover {
-            background-color: $indigoDye;
+            background-color: $hoverColor;
         }
     }
 }
@@ -73,8 +77,8 @@ body {
         display: block;
         text-align: center;
         text-decoration: none;
-        padding: 10px 0px 0px 0px ;
-        color: $indigoDye;
+        padding:15px 0px 0px 0px ;
+        color: $darkBlue;
         font-weight: 700;
     }
 }
