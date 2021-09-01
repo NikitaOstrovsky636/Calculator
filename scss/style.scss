@@ -45,10 +45,10 @@ body {
         grid-template-rows: 63px 63px 63px 63px 63px;
         grid-template-areas: 
             'ce ce ce ce ce'
-            'seven eight nine div result'
+            'seven eight nine div sqrt'
             'four five six mul result'
             'one two three sub result'
-            'zero zero zero sum result';
+            'zero dec neg sum result';
         grid-column-gap: 6px;
         grid-row-gap: 7px;
     }
@@ -141,8 +141,20 @@ body {
         grid-area: zero;
     }
 
+    &__dec {
+        grid-area: dec;
+    }
+
+    &__negative {
+        grid-area: neg;
+    }
+
     &__sum {
         grid-area: sum;
+    }
+
+    &__sqrt {
+        grid-area: sqrt;
     }
 
     &__result {
