@@ -1,26 +1,41 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculator</title>
         <link rel="stylesheet" href="css/style.css" type="text/css">
-        <script src="./js/script.js"></script>
-    </head>
+    </head> 
     <body>
-        <div class="calculator">
-            <form class="calculator-form">
-                <div class="calculator-form__input">
-                    <input type="text" id="a" value="1">
-                    <input type="text" id="b" value="1"> 
+        <div class="calculator-container">
+            <div class="calculator">
+                <input type="text" class="calculator__output" id="output" disabled>
+                <div class="calculator__action-bar">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__ce" id="ce" value="CE">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__seven action-bar__number" value="7">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__eight action-bar__number" value="8">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__nine action-bar__number" value="9">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__div action-bar__operator" value="÷">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__sqrt" id="sqrt" value="√">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__four action-bar__number" value="4">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__five action-bar__number" value="5">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__six action-bar__number" value="6">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__mul action-bar__operator" value="x">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__one action-bar__number" value="1">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__two action-bar__number" value="2">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__three action-bar__number" value="3">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__sub action-bar__operator" value="-">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__zero action-bar__number" value="0">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__dec" id="dec" value=".">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__negative" id="negative" value="+/-">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__sum action-bar__operator" value="+">
+                    <input type="button" class="calculator-action-bar__item action-bar-item__result action-bar__operator" value="=">
                 </div>
-                <div class="calculator-form__action-bar action-bar"> 
-                   <input type="button" class="action-bar__button action-bar__button-sum" id="calc-sam" onclick="calcSum();" value="Sum">
-                   <input type="button" class="action-bar__button action-bar__button-sub" id="calc-sub" onclick="calcSub();" value="Sub">
-                   <input type="button" class="action-bar__button action-bar__button-mul" id="calc-mul" onclick="calcMul();" value="Mul">
-                   <input type="button" class="action-bar__button action-bar__button-div" id="calc-div" onclick="calcDiv();" value="Div">
-                </div>
-            </form>
-            <div class="calculator-result" id="result" ></div>
+            </div>
+            <div class="calculator__footer">
+                <a class="calculator-footer__github-link" target="_blank" href="https://github.com/NikitaOstrovsky636">GitHub</a>
+            </div>
         </div>
+        <script src="./js/script.js"></script>
     </body>
 </html>
